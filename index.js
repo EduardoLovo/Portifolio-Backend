@@ -106,8 +106,8 @@ conn(db_url, db_user, db_pass, db_data);
 //     console.log(`Rodando com banco`);
 // });
 
-app.listen(port, () => {
-    console.log(`Rodando na porta http://localhost:${port}`);
-})
+app.listen(process.env.PORT || port, () => {
+    console.info(`Rodando na porta http://localhost:${port}/`);
+});
 
 // npm run dev
